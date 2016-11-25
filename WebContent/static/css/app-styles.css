@@ -1,0 +1,13 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.title.ng-dirty.ng-invalid-required,
+.name.ng-dirty.ng-invalid-required,
+.department.ng-dirty.ng-invalid-required {
+    background-color: #ffd9d9;
+}
+
+.has-error{
+	color:red;
+}
