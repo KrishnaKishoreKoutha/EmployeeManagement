@@ -1,0 +1,47 @@
+<div class="jumbotron">
+        <div>
+        	<div class="alert" class="{{alertType}}" role="alert" ng-show="showAlert">
+			  <strong>{{statusText}}</strong> 
+			</div>
+			<form 
+        		[formGroup]="empUpdateForm"
+ 					(ngSubmit)="onSubmit(empUpdateForm.value)"
+        		>
+        	<div class="well well-lg">
+	        	<div class="form-inline">
+	        		<div class=form-group> 
+	        			<label for="id">Emp ID</label> <span class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="top" title="Try 1 to 10 for Emp ID"></span>
+	        			<input type="number" (change)="resetForm(empUpdateForm.value)" class="form-control id" formControlName="id" id="id" placeholder="Emp ID"> 
+	       			</div> 
+	   				<button type="button" (click)="searchEmployee(empUpdateForm.value)" class="btn btn-warning btn-xs" value="Search"><span class="glyphicon glyphicon-search"></span></button>
+   				</div> 
+			</div>
+			<div>
+	        	 <div class="form-horizontal">
+	        		<div class="form-group"> 
+	        			<label for="inputTitle" class="pull-left">Title</label> 
+	        			<input type="text" class="form-control title" formControlName="title" id="inputTitle" placeholder="Title"> 
+	        			<div *ngIf="empUpdateForm.controls.title.errors?.pattern" class="has-error">
+					        Title has invalid characters
+				        </div>
+	       			</div> 
+	       			<div class="form-group"> 
+	        			<label for="inputName" class="pull-left">Name</label> 
+	        			<input type="text" class="form-control name" formControlName="name" id="inputName" placeholder="Name"> 
+	        			<div *ngIf="empUpdateForm.controls.name.errors?.pattern" class="has-error">
+					        Name has invalid characters
+				        </div>
+	       			</div> 
+	       			<div class="form-group"> 
+	       				<label for="inputDepartment" class="pull-left">Department</label> 
+	       				<input type="text" class="form-control department" formControlName="department" id="inputDepartment" placeholder="Department">
+	       				<div *ngIf="empUpdateForm.controls.department.errors?.pattern" class="has-error">
+					        Department has invalid characters
+				        </div> 
+	   				</div> 
+	   				<button type="submit" class="btn btn-primary" value="Update" [disabled]="!empUpdateForm.valid">Update</button> 
+				</div>
+			</div>
+			</form>
+		</div>
+      </div>

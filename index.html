@@ -1,0 +1,30 @@
+<html>
+
+<head>
+  <title>Employee Management</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="node_modules/core-js/client/shim.min.js"></script>
+  <script src="node_modules/zone.js/dist/zone.js"></script>
+  <script src="node_modules/reflect-metadata/Reflect.js"></script>
+  <script src="node_modules/systemjs/dist/system.src.js"></script>
+  <script src="systemjs.config.js"></script>
+  <script src="jquery-1.11.3.js"></script>
+  <script src="bootstrap.min.js"></script>
+  <link href="resets.css" rel="stylesheet">
+  <link href="bootstrap.min.css" rel="stylesheet">
+  <link href="jumbotron-narrow.css" rel="stylesheet">
+  <link href="app-styles.css" rel="stylesheet">
+  <script>
+        System.import('app').catch(function(err){  });
+         $(function () {
+      	  $('[data-toggle="tooltip"]').tooltip()
+      	}); 
+    </script>
+</head>
+
+<body>
+	  <em-app>Loading...</em-app>
+</body>
+
+</html>

@@ -1,0 +1,18 @@
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.has-error{
+	color:red;
+}
+
+.ng-invalid:not(form):not(.ng-pristine):not(.required-invalid) {
+  border: 1px solid #d93a3e;
+}
+input[required].ng-invalid {
+  border-right: 5px solid #d93a3e;
+}
+input[required]:not(.required-invalid),
+input[required].ng-invalid:not(.required-invalid) {
+  border-right: 5px solid #37ad79;
+}
